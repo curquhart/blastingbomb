@@ -27,6 +27,7 @@ namespace Bomb
                 return true; // execute original
             }
 
+            // 60 is both magic and arbitrary. Its purpose is just to not explode mantle.
             if (__instance.Resistance < 60 && __instance.BlockMaterial == EnumBlockMaterial.Stone)
             {
                 __result = 0.0d;
