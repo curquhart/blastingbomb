@@ -1,0 +1,15 @@
+{
+	"type": "code",
+	"name": "BlastingBomb",
+	"modid": "blastingbomb",
+	"side": "universal",
+	"version": "1.0.0",
+	
+	"description" : "Changes ore explosions to also apply to stones.",
+	"website": "https://github.com/mschelstastic/blastingbomb",
+	"authors": [ "mschelstastic" ],
+	
+	"dependencies": {
+		"game": "1.8.0"
+	}
+}
