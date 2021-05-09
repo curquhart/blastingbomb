@@ -14,8 +14,8 @@ namespace Bomb
         }
 
         static bool Prefix(
+            Block __instance,
             ref double __result,
-            EnumBlockMaterial ___BlockMaterial,
             IWorldAccessor world,
             BlockPos pos,
             Vec3f blastDirectionVector,
@@ -27,13 +27,13 @@ namespace Bomb
                 return true; // execute original
             }
 
-            if (___BlockMaterial == EnumBlockMaterial.Stone)
+            if (__instance.Resistance < 60 && __instance.BlockMaterial == EnumBlockMaterial.Stone)
             {
                 __result = 0.0d;
             }
             else
             {
-                __result = BlockMaterialUtil.MaterialBlastResistance(blastType, ___BlockMaterial);
+                __result = BlockMaterialUtil.MaterialBlastResistance(blastType, __instance.BlockMaterial);
             }
 
             return false; // do not execute original
